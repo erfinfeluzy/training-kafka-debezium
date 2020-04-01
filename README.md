@@ -1,8 +1,8 @@
 # TUTORIAL KAFKA DEBEZIUM MYSQL (INDONESIAN)
-Tutorial ini akan melakukan hands on bagaiman perubahan data di database dapat di streaming dengan mudah ke Apache Kafka.
+Tutorial ini akan melakukan hands on bagaiman perubahan data di database dapat di streaming dengan mudah ke [Apache Kafka](https://kafka.apache.org/) dengan munggunakan konektor dari [Debezium](https://debezium.io).
 Contoh use casenya adalah pembayaran via virtual account, dimana data akan berubah ketika ada perubahan saldo. perubahan row data ini kemudian distream ke kafka untuk diproses notifikasinya.
 
-## 0. Instal Mysql di docker pakai sample sudah ada datanya & konfigurasi binlog
+## 0. Instal Mysql di docker pakai sample yang sudah ada datanya & konfigurasi binlog CDC
 ```
 > docker run -it --name mysqldbz -p 3306:3306 -e MYSQL_ROOT_PASSWORD=debezium -e MYSQL_USER=mysqluser -e MYSQL_PASSWORD=mysqlpw debezium/example-mysql:0.5
 
@@ -128,3 +128,10 @@ streaming dari program simple spring boot: [GitHub Saya](https://github.com/erfi
 
 > mvn spring-boot:run
 ```
+
+## Pranala Luar
+- https://kafka.apache.org/quickstart
+- https://debezium.io/documentation/reference/0.9/connectors/mysql.html
+- https://medium.com/easyread/ingest-data-dari-mysql-database-ke-bigquery-dengan-apache-kafka-dan-debezium-f519e197f39c
+- https://vladmihalcea.com/how-to-extract-change-data-events-from-mysql-to-kafka-using-debezium/
+- https://www.baeldung.com/spring-kafka
