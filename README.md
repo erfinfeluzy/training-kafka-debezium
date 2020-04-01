@@ -42,7 +42,7 @@ binlog_format     = row
 > cp connect-distributed.properties debezium.properties
 ```
 
-## 6. di file debezium.properties masukkan file path untuk connector
+## 6. edit file debezium.properties masukkan file path untuk connector
 ```
 > vim debezium.properties
         plugin.path=$KAFKA_HOME/connect
