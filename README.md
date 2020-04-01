@@ -1,4 +1,6 @@
 # TUTORIAL KAFKA DEBEZIUM MYSQL (INDONESIAN)
+Tutorial ini akan melakukan hands on bagaiman perubahan data di database dapat di streaming dengan mudah ke Apache Kafka.
+Contoh use casenya adalah pembayaran via virtual account, dimana data akan berubah ketika ada perubahan saldo. perubahan row data ini kemudian distream ke kafka untuk diproses notifikasinya.
 
 ## 0. Instal Mysql di docker pakai sample sudah ada datanya & konfigurasi binlog
 ```
