@@ -12,6 +12,7 @@ log_bin           = mysql-bin
 expire_logs_days  = 1
 binlog_format     = row
 ```
+> Note: bin log digunakan untuk mengambil change data capture (CDC) dari mysql
 
 ## 1. Download kafka & extract
 ```
