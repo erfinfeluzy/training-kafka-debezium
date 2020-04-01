@@ -122,6 +122,7 @@ cek di topik = dbserver1.inventory.customers
 ```
 streaming dari program simple spring boot: [GitHub Saya](https://github.com/erfinfeluzy/training-kafka-debezium) 
 ```
-git clone https://github.com/erfinfeluzy/training-kafka-debezium.git
-mvn spring-boot:run
+> git clone https://github.com/erfinfeluzy/training-kafka-debezium.git
+
+> mvn spring-boot:run
 ```
