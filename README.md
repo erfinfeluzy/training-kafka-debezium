@@ -32,25 +32,32 @@ binlog_format     = row
 ```
 
 ## 4. extract debezium connector
+```
 > tar -xzf debezium-connector-mysql-0.8.3.Final-plugin.tar.gz
+```
 
 ## 5. copy file distributed.properties jadi debezium.properties di folder config
+```
 > cd ../config
 > cp connect-distributed.properties debezium.properties
+```
 
 ## 6. di file debezium.properties masukkan file path untuk connector
+```
 > vim debezium.properties
         plugin.path=$KAFKA_HOME/connect
-
+```
 ## 7. start zookeeper, kafka, connector
+```
 >cd $KAFKA_HOME
 >bin/zookeeper-server-start.sh config/zookeeper.properties
 >bin/kafka-server-start.sh config/server.properties
 >bin/connect-distributed.sh config/debezium.properties
-
+```
 ## 8. daftarin konfigurasi konektor via rest api
 POST localhost:8083/connectors
 body=
+```
 {
   "name": "inventory-connector",
   "config": {
@@ -67,7 +74,7 @@ body=
     "database.history.kafka.topic": "schema-changes.inventory"
   }
 }
-
+```
 ## 9. coba! ubah data di table inventory.customers 
 result:
 
