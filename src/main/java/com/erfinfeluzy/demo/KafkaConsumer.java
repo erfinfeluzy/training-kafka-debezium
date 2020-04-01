@@ -15,7 +15,8 @@ public class KafkaConsumer {
 	public void listen(
 			@Payload String message,
 			@Header(KafkaHeaders.RECEIVED_PARTITION_ID) int partition
-			) {
+			) 
+	{
 	   System.out.println("Received Message in group : [consumer-group-id-1]; "
 	   		+ "Partition:"+ partition +"; "
 	   		+ "[" + new Date() + "] - message: " + message);
