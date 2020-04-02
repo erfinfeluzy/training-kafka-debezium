@@ -102,6 +102,13 @@ schema-changes.inventory
 
 
 ## 9. coba! ubah data di table inventory.customers 
+```
+UPDATE `inventory`.`customers`
+SET
+    `last_name` = 'Paijon'
+WHERE
+    `id` = 1003
+```
 result:
 
 cek di topik = dbserver1.inventory.customers
